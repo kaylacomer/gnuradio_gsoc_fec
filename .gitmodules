@@ -1,0 +1,6 @@
+[submodule "blog/simple-style"]
+	path = blog/simple-style
+	url = https://github.com/yanlinlin82/simple-style.git
+[submodule "blog/themes/simple-style"]
+	path = blog/themes/simple-style
+	url = https://github.com/yanlinlin82/simple-style.git
