@@ -12,17 +12,6 @@ include(GrPython)
 ########################################################################
 find_program(XMLTO_EXECUTABLE xmlto)
 
-if(XMLTO_EXECUTABLE)
-    add_custom_command(
-        OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/gr-trellis.html
-        DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/gr-trellis.xml
-        COMMAND ${XMLTO_EXECUTABLE} html-nochunks
-                ${CMAKE_CURRENT_SOURCE_DIR}/gr-trellis.xml)
-    add_custom_target(gr_trellis_html ALL
-                      DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/gr-trellis.html)
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/gr-trellis.html
-            DESTINATION ${GR_PKG_DOC_DIR}/html)
-endif(XMLTO_EXECUTABLE)
 
 ########################################################################
 # Generate xml doc
